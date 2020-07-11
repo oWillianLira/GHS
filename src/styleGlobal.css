@@ -1,0 +1,45 @@
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button, input {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --black: #001;
+  --dark: #011627;
+  --mid: #689;
+  --light: #bde;
+  --white: #eef;
+}
+
+#root {
+  background-color: var(--dark);
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  background-color: var(--dark);
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--white);
+  font-family: monospace;
+}
