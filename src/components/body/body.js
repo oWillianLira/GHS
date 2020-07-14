@@ -10,7 +10,7 @@ import './body.css'
 class Body extends Component {
   render() {
     return(
-      <main>
+      <main id="body_content">
         <Switch>
           <Route exact path="/" component={Feed} />
           <Route path="/feed" component={Feed} />

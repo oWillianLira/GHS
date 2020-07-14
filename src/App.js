@@ -7,8 +7,10 @@ import Body from './components/body/body'
 function App() {
   return (
     <div id="app">
-    <Header />
-    <Body />
+      <Header />
+      <section>
+        <Body />
+      </section>
     </div>
   );
 }

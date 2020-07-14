@@ -1,6 +1,4 @@
-main {
-  border: solid 1px;
+main#body_content {
   width: 750px;
   max-width: 100%;
-  padding: 40px 10px;
 }
