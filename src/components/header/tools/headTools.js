@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css'
 
@@ -6,18 +7,18 @@ class headTools extends Component {
   render(){
     return(
       <div className="tools">
-        <a href="#">
+        <Link to="/">
           <i className="fa fa-home" aria-hidden="true"></i>
           <span>Home</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/profile">
           <i className="fa fa-user" aria-hidden="true"></i>
           <span>Profile</span>
-        </a>
-        <a href="#">
+        </Link>
+        <Link to="/messages">
           <i className="fa fa-comments-o" aria-hidden="true"></i>
           <span>Messages</span>
-        </a>
+        </Link>
       </div>
     )
   }
