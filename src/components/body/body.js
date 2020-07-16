@@ -12,7 +12,7 @@ class Body extends Component {
     return(
       <main id="body_content">
         <Switch>
-          <Route exact path="/" component={Feed} />
+          <Route exact path="/" component={Profile} />
           <Route path="/feed" component={Feed} />
           <Route path="/profile" component={Profile} />
           <Route path="/messages" component={Messages} />

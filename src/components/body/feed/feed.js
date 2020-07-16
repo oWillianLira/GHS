@@ -1,7 +1,19 @@
 import React from 'react';
 
 function feed() {
-  return <div>FEED</div>;
+  return (
+    <section id="feed">
+      <br />
+      <br />
+      <br />
+      <br />
+      <h2>Coming Soon</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+    </section>
+  )
 }
 
 export default feed;

@@ -43,3 +43,8 @@ a {
   color: var(--white);
   font-family: monospace;
 }
+
+#app #content {
+  display: flex;
+  justify-content: space-between;
+}
