@@ -7,19 +7,24 @@ import Messages from './messages/messages'
 
 import './body.css'
 
-class Body extends Component {
-  render() {
-    return(
-      <main id="body_content">
-        <Switch>
-          <Route exact path="/" component={Profile} />
-          <Route path="/feed" component={Feed} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/messages" component={Messages} />
-        </Switch>
-      </main>
-    )
-  }
+const Body = props => {
+  let test = props.profile
+  return(
+    <main id="body_content">
+      <Switch>
+        <Route exact path="/" component={Feed} />
+        <Route path="/feed" component={Feed} />
+        <Route 
+          path="/profile" 
+          render={props => (
+            <Profile user={test} />
+          )}
+          // component={Profile} 
+        />
+        <Route path="/messages" component={Messages} />
+      </Switch>
+    </main>
+  )
 }
 
 export default Body;

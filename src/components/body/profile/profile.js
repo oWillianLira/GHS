@@ -3,10 +3,10 @@ import './profile.css'
 
 import Header from './header/header'
 
-function profile() {
+const profile = (props) => {
   return (
     <div className="profile">
-      <Header />
+      <Header profile={props.user} />
     </div>
   )
 }
