@@ -14,8 +14,17 @@ const Header = (props) => {
           <i className="fa fa-map-marker" aria-hidden="true"></i>
         </div>
         <div className="userInfo">
-          <span>{props.profile.company}</span>
-          <i className="fa fa-briefcase" aria-hidden="true"></i>
+          {props.profile.company != null ?
+            <>
+            <span>{props.profile.company}</span>
+            <i className="fa fa-briefcase" aria-hidden="true"></i>
+            </>
+            :
+            <>
+            <span>{props.profile.bio}</span>
+            <i className="fa fa-address-card" aria-hidden="true"></i>
+            </>
+          }
         </div>
         <div className="userInfo">
           <span><strong>{props.profile.followers}</strong> followers ⚭ <strong>{props.profile.following}</strong> following</span>

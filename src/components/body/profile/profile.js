@@ -1,7 +1,7 @@
 import React from 'react';
 import './profile.css'
 
-import Header from './header/header'
+import Header from './header/header.jsx'
 
 const profile = (props) => {
   return (
