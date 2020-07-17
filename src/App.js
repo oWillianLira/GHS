@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('https://api.github.com/users/dusty-phillips')
+    fetch('https://api.github.com/users/oWillianLira')
     .then(res => res.json())
     .then((data) => {
       this.setState({user: data})

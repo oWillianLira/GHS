@@ -8,7 +8,7 @@ import Messages from './messages/messages'
 import './body.css'
 
 const Body = props => {
-  let test = props.profile
+  let user = props.profile
   return(
     <main id="body_content">
       <Switch>
@@ -17,9 +17,8 @@ const Body = props => {
         <Route 
           path="/profile" 
           render={props => (
-            <Profile user={test} />
+            <Profile user={user} />
           )}
-          // component={Profile} 
         />
         <Route path="/messages" component={Messages} />
       </Switch>
