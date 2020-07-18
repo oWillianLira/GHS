@@ -9,6 +9,7 @@ import './body.css'
 
 const Body = props => {
   let user = props.profile
+  let repos = props.postsUrl
   return(
     <main id="body_content">
       <Switch>
@@ -17,7 +18,7 @@ const Body = props => {
         <Route 
           path="/profile" 
           render={props => (
-            <Profile user={user} />
+            <Profile user={user} posts={repos} />
           )}
         />
         <Route path="/messages" component={Messages} />

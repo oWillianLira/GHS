@@ -8,7 +8,7 @@ const profile = (props) => {
   return (
     <div className="profile">
       <Header profile={props.user} />
-      <Repositories profile={props.user} />
+      <Repositories posts={props.posts} />
     </div>
   )
 }

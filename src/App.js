@@ -25,7 +25,7 @@ class App extends Component {
       <div id="app">
         <Header />
         <section id="content">
-          <Body profile={this.state.user} />
+          <Body profile={this.state.user} postsUrl={this.state.user.repos_url} />
           <Sidebar />
         </section>
       </div>

@@ -1,14 +1,31 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 import './posts.css'
 
 
-class myPosts extends Component {
+class myPosts extends React.Component {
+  render(){
+    const posts = this.state.reposList
+    console.log(posts)
+    return(
+      <section id="myPosts">
+        {posts.map((post) => (
+          <div className="card">
+            <div className="reposPost">
+              <h2>{post.name}</h2>
+              <h4>{post.description}</h4>
+            </div>
+          </div>
+        ))}
+      </section>
+    )
+  }
+
   constructor(props) {
     super(props);
     this.state = {
-      reposURL: 'https://api.github.com/users/oWillianLira/repos',
-      reposList: ""
+      reposURL: props.posts,
+      reposList: []
     }
   }
 
@@ -19,20 +36,6 @@ class myPosts extends Component {
       this.setState({ reposList: list })
     })
     .catch(console.log)
-  }
-  
-  render(){
-    return(
-      <section id="myPosts">
-        <br />
-        <br />
-        <br />
-        <h2>Soon...</h2>
-        <br />
-        <br />
-        <br />
-      </section>
-    )
   }
 }
 
