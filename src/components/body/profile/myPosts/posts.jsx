@@ -6,14 +6,20 @@ import './posts.css'
 class myPosts extends React.Component {
   render(){
     const posts = this.state.reposList
-    console.log(posts)
     return(
       <section id="myPosts">
         {posts.map((post) => (
-          <div className="card">
-            <div className="reposPost">
+          <div className="reposCard">
+            <div className="reposInfo">
+              <span>by: <a target="_blank" href={post.owner.html_url}>{post.owner.login}</a></span>
+              <span>{post.created_at}</span>
+            </div>
+            <div className="reposData">
               <h2>{post.name}</h2>
               <h4>{post.description}</h4>
+              <span>size: {post.size}</span> <br/>
+              <span>language: {post.language}</span>
+              <a target="_blank" href={post.html_url}>See repository</a>
             </div>
           </div>
         ))}

@@ -2,7 +2,7 @@ import React from 'react';
 import './profile.css'
 
 import Header from './header/header.jsx'
-import Repositories from './myPosts/posts'
+import Repositories from './myPosts/posts.jsx'
 
 const profile = (props) => {
   return (

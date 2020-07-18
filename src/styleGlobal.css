@@ -23,7 +23,7 @@ a {
 
 #root {
   background-color: var(--dark);
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
