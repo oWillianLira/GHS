@@ -14,7 +14,12 @@ const Body = props => {
     <main id="body_content">
       <Switch>
         <Route exact path="/" component={Feed} />
-        <Route path="/feed" component={Feed} />
+        <Route 
+          path="/feed" 
+          render={props => (
+            <Feed user={user} />
+          )}
+        />
         <Route 
           path="/profile" 
           render={props => (

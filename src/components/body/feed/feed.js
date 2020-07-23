@@ -1,17 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-function feed() {
+import './feed.css'
+import Posts from '../../posts/posts.js'
+
+const feed = (props) => {
   return (
     <section id="feed">
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>Coming Soon</h2>
-      <br />
-      <br />
-      <br />
-      <br />
+      <header>
+        <h2>Feed</h2>
+      </header>
+      <Posts posts={props.user.repos_url} user={props.user} />
     </section>
   )
 }

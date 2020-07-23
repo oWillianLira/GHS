@@ -4,8 +4,37 @@ import './posts.css'
 
 
 class myPosts extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      reposURL: props.posts,
+      reposURL2: 'https://api.github.com/users/khigashi/repos',
+      reposList: [],
+      reposList2: []
+    }
+  }
+
+  
+  componentDidMount() {
+    // Promise.all([
+    //   fetch(this.state.reposURL),
+    //   fetch(this.state.reposURL2)
+    // ]).then(([res1, res2]) => {
+    //   this.setState({ reposList: res1 })
+    // })
+
+    fetch(this.state.reposURL)
+    .then(res => res.json())
+    .then((list) => {
+      this.setState({ reposList: list })
+    })
+    .catch(console.log)
+  }
+
   render(){
     const posts = this.state.reposList
+
     return(
       <section id="myPosts">
         {posts.map((post) => (
@@ -26,23 +55,7 @@ class myPosts extends React.Component {
       </section>
     )
   }
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      reposURL: props.posts,
-      reposList: []
-    }
-  }
-
-  componentDidMount() {
-    fetch(this.state.reposURL)
-    .then(res => res.json())
-    .then((list) => {
-      this.setState({ reposList: list })
-    })
-    .catch(console.log)
-  }
+  
 }
 
 export default myPosts
