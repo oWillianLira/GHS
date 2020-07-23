@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './feed.css'
-import Posts from '../../posts/posts.js'
+// import Posts from '../../posts/posts.js'
 
 const feed = (props) => {
   return (
@@ -9,7 +9,7 @@ const feed = (props) => {
       <header>
         <h2>Feed</h2>
       </header>
-      <Posts posts={props.user.repos_url} user={props.user} />
+      {/* <Posts posts={props.user.repos_url} user={props.user} /> */}
     </section>
   )
 }
