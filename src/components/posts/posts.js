@@ -10,26 +10,27 @@ class myPosts extends React.Component {
     this.state = {
       reposURL: props.posts,
       reposURL2: 'https://api.github.com/users/khigashi/repos',
-      reposList: [],
-      reposList2: []
+      reposList: []
     }
   }
-
   
   componentDidMount() {
-    // Promise.all([
-    //   fetch(this.state.reposURL),
-    //   fetch(this.state.reposURL2)
-    // ]).then(([res1, res2]) => {
-    //   this.setState({ reposList: res1 })
-    // })
-
-    fetch(this.state.reposURL)
-    .then(res => res.json())
+    Promise.all([
+      fetch(this.state.reposURL).then(res => res.json()),
+      fetch(this.state.reposURL2).then(res => res.json())
+    ])
     .then((list) => {
-      this.setState({ reposList: list })
-    })
-    .catch(console.log)
+        // console.log(list)
+        let lista = list[0]
+        lista.concat(list[1])
+        console.log(lista)
+        // this.setState({ reposList: lista })
+      }
+    )
+    // .then((list) => {
+      // this.setState({ reposList: list })
+    // })
+    // .catch(console.log)
   }
 
   render(){
